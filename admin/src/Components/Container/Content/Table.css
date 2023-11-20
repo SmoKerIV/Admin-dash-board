@@ -1,0 +1,30 @@
+.top {
+  width: 100%;
+  padding-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.search {
+  position: relative;
+}
+.top input {
+  width: 250px;
+  padding: 8px;
+  border: 1px solid #060606;
+  border-radius: 99999px;
+  background-color: #f6f6f6;
+}
+.top .magnify {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+.top button {
+  width: 160px;
+  padding: 8px;
+  border: 1px solid #000;
+  border-radius: 9px;
+  background-color: #000;
+  color: #fff;
+}
