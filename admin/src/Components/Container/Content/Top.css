@@ -1,6 +1,6 @@
 .top {
   width: 100%;
-  padding-top: 16px;
+  padding: 16px 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,12 +15,8 @@
   border-radius: 99999px;
   background-color: #f6f6f6;
 }
-.top .magnify {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-}
-.top button {
+
+/* .top button {
   width: 160px;
   padding: 8px;
   border: 1px solid #000;
@@ -28,3 +24,9 @@
   background-color: #000;
   color: #fff;
 }
+.top button:hover{
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  transition: 0.5s;
+} */

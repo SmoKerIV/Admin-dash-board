@@ -1,0 +1,10 @@
+@media screen and (max-width: 540px) {
+    .Container {
+        max-width: 100%;
+    }
+
+   column .Description {
+        display: none;
+    }
+
+}

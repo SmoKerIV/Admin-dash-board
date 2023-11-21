@@ -1,15 +1,15 @@
 import React from "react";
-import "./Table.css";
-const Table = () => {
+import "./Top.css";
+import Add from "../Modal/Add";
+const Top = () => {
   return (
     <div className="top">
       <div className="search">
-        <button className="magnify"></button>
         <input placeholder="Search Product" type="text" />
       </div>
-      <button>Add Product</button>
+      <Add></Add>
     </div>
   );
 };
 
-export default Table;
+export default Top;
