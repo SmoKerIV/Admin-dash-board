@@ -4,6 +4,7 @@ import Header from "./Components/Header/Header";
 import Top from "./Components/Container/Content/Top";
 import Tbl from "./Components/Container/Table/Tbl";
 import { useEffect, useState } from "react";
+import { Pagination } from "antd";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -17,6 +18,7 @@ function App() {
       );
       let data = await resp.json();
       setProducts(data.products);
+      
     } catch (error) {
       console.log(error);
     }
@@ -33,8 +35,17 @@ function App() {
       <Container>
         <Header />
         <hr />
-        <Top setSearch={setSearch} handleInputChange={handleInputChange} setValue={setValue} />
+        <Top
+          setSearch={setSearch}
+          handleInputChange={handleInputChange}
+          setValue={setValue}
+          value={value}
+          search={search}
+          getProducts={getProducts}
+          products={products}
+        />
         <Tbl products={products} skip={skip} setSkip={setSkip} />
+
       </Container>
     </div>
   );

@@ -4,7 +4,7 @@ import Edit from "../Modal/Edit";
 import Delete from "../Modal/Delete";
 import "./Tbl.css";
 
-function Tbl({ products, setSkip ,skip}) {
+function Tbl({ products, setSkip }) {
   const handleEditSuccess = () => {
     alert("Product edited successfully");
   };
@@ -103,14 +103,12 @@ function Tbl({ products, setSkip ,skip}) {
             style={{ width: "250px" }}
           />
         </div>
-      </center>
-      <center>
-        <Pagination
-          defaultCurrent={1}
-          total={100}
-          showSizeChanger={false}
-          onChange={(page) => setSkip((page - 1) * 10)}
-        />
+          <Pagination
+            defaultCurrent={1}
+            total={100}
+            showSizeChanger={false}
+            onChange={(page) => setSkip((page - 1) * 10)}
+          />
       </center>
     </div>
   );
