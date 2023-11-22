@@ -1,14 +1,19 @@
+.table2 {
+    display: none;
+}
+
 @media screen and (max-width: 540px) {
     .Container {
         max-width: 100%;
     }
 
-   .custom-id-column {
-       background-color: rgb(122, 0, 0);
-       /* Add your desired background color */
-       color: white;
-       /* Add your desired text color */
-       /* Add any other styles as needed */
-   }
+    .table1 {
+        display: none;
 
+    }
+
+    .table2 {
+        display: block;
+    }
 }
+

@@ -27,6 +27,7 @@ const Delete = ({ id, onDelete }) => {
   };
   const handleOk = () => {
     handleDelete();
+    onDelete();
     setIsModalOpen(false);
   };
   const handleCancel = () => {

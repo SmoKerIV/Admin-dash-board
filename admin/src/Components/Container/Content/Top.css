@@ -9,24 +9,10 @@
   position: relative;
 }
 .top input {
-  width: 250px;
+  width: 200px;
   padding: 8px;
   border: 1px solid #060606;
   border-radius: 99999px;
   background-color: #f6f6f6;
 }
 
-/* .top button {
-  width: 160px;
-  padding: 8px;
-  border: 1px solid #000;
-  border-radius: 9px;
-  background-color: #000;
-  color: #fff;
-}
-.top button:hover{
-  background-color: #fff;
-  color: #000;
-  cursor: pointer;
-  transition: 0.5s;
-} */

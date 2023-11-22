@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button, Modal, Input } from "antd";
 const { TextArea } = Input;
 import { EditOutlined } from "@ant-design/icons";
-const Edit = ({ id, products }) => {
+const Edit = ({ id, products, onEdit }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [title, setTitle] = useState("");
@@ -12,6 +12,7 @@ const Edit = ({ id, products }) => {
     setIsModalOpen(true);
   };
   const handleOk = () => {
+    onEdit();
     setIsModalOpen(false);
   };
   const handleCancel = () => {

@@ -53,7 +53,7 @@ const Add=()=> {
         onClick={showAdding}
         style={{ backgroundColor: "black", color: "white"  }}
       >
-        Add new product
+        Add Product
       </Button>
       <Modal
         title="Add Product"

@@ -7,9 +7,14 @@ import { useEffect, useState } from "react";
 
 function App() {
   const [products, setProducts] = useState([]);
+  const [skip, setSkip] = useState(0);
+  const [search, setSearch] = useState("");
+  const [value, setValue] = useState();
   const getProducts = async () => {
     try {
-      let resp = await fetch(`https://dummyjson.com/products?limit=10&`);
+      let resp = await fetch(
+        `https://dummyjson.com/products/search?q=${search}&limit=10&skip=${skip}`
+      );
       let data = await resp.json();
       setProducts(data.products);
     } catch (error) {
@@ -19,13 +24,17 @@ function App() {
   useEffect(() => {
     getProducts();
   }, []);
+  const handleInputChange = () => {
+    setSkip(0);
+    setSearch(value);
+  };
   return (
     <div>
       <Container>
         <Header />
         <hr />
-        <Top />
-        <Tbl products={products}/>
+        <Top setSearch={setSearch} handleInputChange={handleInputChange} setValue={setValue} />
+        <Tbl products={products} skip={skip} setSkip={setSkip} />
       </Container>
     </div>
   );
