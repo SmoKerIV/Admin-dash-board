@@ -1,5 +1,5 @@
 import React from "react";
-import { Space, Table, Pagination } from "antd";
+import { Space, Table } from "antd";
 import Edit from "../Modal/Edit";
 import Delete from "../Modal/Delete";
 import "./Tbl.css";
@@ -103,12 +103,6 @@ function Tbl({ products, setSkip }) {
             style={{ width: "250px" }}
           />
         </div>
-          <Pagination
-            defaultCurrent={1}
-            total={100}
-            showSizeChanger={false}
-            onChange={(page) => setSkip((page - 1) * 10)}
-          />
       </center>
     </div>
   );
