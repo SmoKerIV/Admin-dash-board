@@ -1,8 +1,11 @@
 import React from "react";
 import { Space, Table } from "antd";
 const { Column } = Table;
-const Tbl = ({ products }) => (
-  <Table dataSource={products}>
+
+import Edit from "../Modal/Edit";
+import Delete from "../Modal/Delete";
+const Table1 = ({ products }) => (
+  <Table1 dataSource={products}>
     <Column title="ID" dataIndex="id" key="id" />
     <Column title="Title" dataIndex="title" key="title" />
     <Column title="Description" dataIndex="description" key="description" />
@@ -12,12 +15,25 @@ const Tbl = ({ products }) => (
       key="action"
       render={(_, record) => (
         <Space size="middle">
-          <a>View</a>
-          <a>Edit</a>
-          <a>Delete</a>
+          <a>
+            <Edit
+              id={record.id}
+              onEdit={handleEditSuccess}
+              products={products}
+            />
+          </a>
+          <a>
+            <Delete id={record.id} onDelete={handleDeleteSuccess} />
+          </a>
         </Space>
       )}
     />
-  </Table>
+  </Table1>
 );
-export default Tbl;
+  const handleEditSuccess = () => {
+    alert("Product edited successfully");
+  };
+    const handleDeleteSuccess = () => {
+    alert("Product deleted successfully");
+}
+export default Table1;

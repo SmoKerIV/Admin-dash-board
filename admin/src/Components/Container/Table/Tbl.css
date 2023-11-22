@@ -3,8 +3,12 @@
         max-width: 100%;
     }
 
-   column .Description {
-        display: none;
-    }
+   .custom-id-column {
+       background-color: rgb(122, 0, 0);
+       /* Add your desired background color */
+       color: white;
+       /* Add your desired text color */
+       /* Add any other styles as needed */
+   }
 
 }

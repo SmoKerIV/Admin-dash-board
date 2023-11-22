@@ -1,9 +1,8 @@
 import React, { Component, useState } from "react";
 import { Button, Modal, Input } from "antd";
-import { DollarOutlined } from "@ant-design/icons";
 import TextArea from "antd/es/input/TextArea";
 
-function NewProduct() {
+const Add=()=> {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [title, setTitle] = useState("");
@@ -52,39 +51,38 @@ function NewProduct() {
       <Button
         type="primary"
         onClick={showAdding}
-        style={{ backgroundColor: "black", color: "white" }}
+        style={{ backgroundColor: "black", color: "white"  }}
       >
         Add new product
       </Button>
       <Modal
-        title="Add new product"
+        title="Add Product"
         open={isModalOpen}
         onOk={addNewProduct}
         onCancel={handleCancel}
         confirmLoading={isLoading}
       >
         <p>
-          product name
+          Product Name
           <Input
-            placeholder="Ex: iphone X"
+            placeholder="Name"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
         </p>
         <p>
-          description
+          Description
           <TextArea
             rows={3}
-            placeholder="Ex: An Apple mobile phone with..."
+            placeholder="Description"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           />
         </p>
         <p>
-          price
+          Price
           <Input
-            addonAfter={<DollarOutlined />}
-            placeholder="Ex: 1,200 $"
+            placeholder="Price"
             value={price}
             onChange={(e) => setPrice(e.target.value)}
           />
@@ -94,4 +92,4 @@ function NewProduct() {
   );
 }
 
-export default NewProduct;
+export default Add;

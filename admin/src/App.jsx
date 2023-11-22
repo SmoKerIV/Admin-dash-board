@@ -9,10 +9,9 @@ function App() {
   const [products, setProducts] = useState([]);
   const getProducts = async () => {
     try {
-      let resp = await fetch(`https://dummyjson.com/products?limit=10`);
+      let resp = await fetch(`https://dummyjson.com/products?limit=10&`);
       let data = await resp.json();
       setProducts(data.products);
-      console.log(products);
     } catch (error) {
       console.log(error);
     }
